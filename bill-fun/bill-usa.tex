@@ -1,0 +1,141 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=2.25in,showframe,   nomarginpar,
+]{geometry}
+\usepackage[
+series={A},
+noend,
+noeledsec,
+nofamiliar,
+noledgroup
+]{reledmac}
+\usepackage{fontspec}
+\makeatletter
+\newcommand{\congress}[1]{\def\@congress{#1}}
+\newcommand{\session}[1]{\def\@session{#1}}
+\newcommand{\sordinal}[1]{\def\@sordinal{#1}}
+\newcommand{\cordinal}[1]{\def\@cordinal{#1}}
+  \linenumincrement{1}
+  \firstlinenum{1}
+\usepackage[compact]{titlesec}
+
+\def\printcongress{\@congress}% Display title
+\def\printsession{\@session}% Display title
+\def\printcordinal{\@cordinal}% Display title
+\def\printsordinal{\@sordinal}% Display title
+
+\makeatother
+
+
+\usepackage{relsize}
+\newcommand{\fakesc}[1]{\smaller\MakeUppercase{#1}\larger}
+\newfontfamily\liner{Times New Roman}
+
+\setmainfont[ItalicFont={De Vinne Italic Text}]{De Vinne Text}
+\newfontfamily\titling{ITC Cheltenham Std Bold}
+\usepackage{color}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\newcommand{\acthead}[1]{\begin{tabular}{@{}ccc}
+\scalebox{0.75}{\begin{tabular}{c}
+%%%%%%%%%%%%%
+\printcongress\fakesc{\printcordinal}\ C\fakesc{ongress}\\
+\printsession\fakesc{st}\ S\fakesc{ession}\\
+\hspace{1ex}\\\hspace{1ex}
+\end{tabular}}
+&\scalebox{1.25}{\huge\titling #1}&
+{\color{white}
+}
+\\
+%\vspace*{-1ex}
+&\rule{1.25in}{1pt}\\\vspace*{2ex}&\\
+&\Huge\titling\MakeUppercase{an act}&
+\end{tabular}
+\bigskip}
+\setlength\parindent{0em}
+\congress{117}\cordinal{th}
+\session{1}\sordinal{st}
+\usepackage{hanging}
+\usepackage[breakable,skins]{tcolorbox}
+\newtcolorbox{legis}[1][]{%
+    breakable,
+    width=\textwidth,
+boxsep=16pt,left=0pt,right=-16pt,top=0pt,bottom=0pt,
+    enhanced,
+    colback=white,
+    colframe=white,
+    coltitle=white,
+    #1
+}
+\newenvironment{law}{
+\begin{legis}\setlength{\parindent}{0.25in}
+\beginnumbering\pstart}{\pend\endnumbering\end{legis}}
+\renewcommand{\numlabfont}{\liner\normalsize}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage[pagewise]{lineno}
+\usepackage{changepage}
+\usepackage{listings}
+\usepackage{verse}
+\newcounter{seclaw}
+\usepackage{ifthen}
+\newcommand{\lawsec}[1]{\stepcounter{seclaw}\MakeUppercase{\scriptsize\cent\bfseries 
+\ifnum\theseclaw=1%
+section %
+\else%
+sec.
+\fi%
+\arabic{seclaw}. #1}}
+\begin{document}
+\thispagestyle{empty}
+\vfill
+
+	\acthead{S. 475}
+	\newfontfamily\cent[RawFeature={+liga,+dlig}, ItalicFont={TeXGyreScholaX-Italic},ItalicFeatures={
+SmallCapsFont={TeXGyreScholaX-Italic},
+SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
+},
+BoldFont={TeXGyreScholaX-Bold},
+SmallCapsFont={TeXGyreScholaX-Regular},
+SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
+]{TeXGyreScholaX-Regular}
+
+\doublespacing
+\large
+\hangpara{0.25in}{1}To amend title 5, United States Code, to designate Juneteenth National Independence Day as a legal public holiday.\normalsize
+\setlength{\parindent}{0.25in}
+
+
+\begin{law}
+
+\textit{Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled,}
+
+\end{law}
+
+\clearpage
+
+
+\begin{law}
+	\lawsec{SHORT TITLE}
+
+This Act may be cited as the “Juneteenth National Independence Day Act”.
+
+\lawsec{JUNETEENTH NATIONAL INDEPENDENCE DAY AS A LEGAL PUBLIC HOLIDAY}
+
+Section 6103(a) of title 5, United States Code, is amended by inserting after the item relating to Memorial Day the following:
+
+
+``Juneteenth National Independence Day, June 19.''
+
+
+\end{law}\setlength{\parindent}{0.5in}
+
+Passed the Senate June 15, 2021.
+
+Attest:
+
+\hfill\textit{Secretary}
+
+
+
+
+\end{document}
