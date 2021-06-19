@@ -15,8 +15,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{fontspec}
 
-\setromanfont{New Century Schoolbook LT Std}
-\newfontface\goudy{Goudy Text MT Std}
+\setromanfont[RawFeature={+liga,+dlig}, ItalicFont={TeXGyreScholaX-Italic},ItalicFeatures={
+SmallCapsFont={TeXGyreScholaX-Italic},
+SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
+},
+BoldFont={TeXGyreScholaX-Bold},
+BoldFeatures={
+SmallCapsFont={TeXGyreScholaX-Bold},
+SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
+},
+SmallCapsFont={TeXGyreScholaX-Regular},
+SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
+]{TeXGyreScholaX-Regular}
+\newfontface\goudy{Frederick Text}
 \newfontface\bodo[LetterSpace=2]{Bodoni Std Bold Italic}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
