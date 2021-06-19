@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.8)  18 JUN 2021 21:14
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.8)  19 JUN 2021 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -898,16 +898,12 @@ LaTeX Font Info:    ... okay on input line 3.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: showframe 
+* modes: 
 * h-part:(L,W,R)=(155.38005pt, 303.5349pt, 155.38005pt)
 * v-part:(T,H,B)=(155.38005pt, 484.20988pt, 155.38005pt)
 * \paperwidth=614.295pt
@@ -934,7 +930,7 @@ package with kernel methods
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (/usr/local/texlive/2021/texmf-dist/tex/latex/fmtcount/fc-english.def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fmtcount/fc-english.def
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
 File: fc-english.def 2016/01/12
@@ -998,50 +994,35 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 3.
 \c@lstlisting=\count396
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 3.
  Section 1 (/Users/ezgranet/Documents/GitHub/us-legislation-tex/bill-fun/.texpadtmp/bill-usa.1)
 \openout3 = `bill-usa.1'.
 
-
-Overfull \hbox (0.4pt too wide) has occurred while \output is active
-[] | [] |
- []
-
-[1
+ [1
 
 ] Section 2 (/Users/ezgranet/Documents/GitHub/us-legislation-tex/bill-fun/.texpadtmp/bill-usa.2)
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
- []
-
-
-Overfull \hbox (0.4pt too wide) has occurred while \output is active
-[] | [] |
  []
 
 [2
 
 \openout3 = `bill-usa.2'.
 
-]
-Overfull \hbox (0.4pt too wide) has occurred while \output is active
-[] | [] |
- []
-
-[3
+] [3
 
 ] (/Users/ezgranet/Documents/GitHub/us-legislation-tex/bill-fun/.texpadtmp/bill-usa.aux) ) 
 Here is how much of TeX's memory you used:
- 23333 strings out of 476469
- 517148 string characters out of 5814088
- 1079946 words of memory out of 5000000
- 43351 multiletter control sequences out of 15000+600000
- 406574 words of font info for 87 fonts, out of 8000000 for 9000
+ 23308 strings out of 476469
+ 516419 string characters out of 5814088
+ 1079926 words of memory out of 5000000
+ 43331 multiletter control sequences out of 15000+600000
+ 406558 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,18n,106p,1014b,988s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,18n,106p,1014b,986s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on /Users/ezgranet/Documents/GitHub/us-legislation-tex/bill-fun/.texpadtmp/bill-usa.pdf (3 pages).

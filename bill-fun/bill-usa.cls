@@ -6,7 +6,7 @@
 % Page format
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
- \RequirePackage[margin=2.15in,   nomarginpar,showframe,
+ \RequirePackage[margin=2.15in,   nomarginpar,
 ]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,6 +14,7 @@
 % PAGE LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 
+
 \RequirePackage{fancyhdr}
 \RequirePackage{fmtcount}
 \fmtcountsetoptions{fmtord=level}
@@ -160,7 +161,7 @@ SmallCapsFeatures={LetterSpace= 10, RawFeature={+smcp}},
 \hfill\textit{\printsignature}\\
 
 \vspace*{\fill}
-{\footnotesize\textdagger\quad\cent\bfseries\printbillnum\quad\printversion}
+{\scriptsize\textdagger\quad\cent\bfseries\printbillnum\quad\printversion}
 \clearpage
 \thispagestyle{empty}
 \vspace*{.25\textheight}\hfill\scalebox{0.75}{\rotatebox{270}{%%%%
@@ -303,3 +304,13 @@ sec.
 
 % Formatting hook for all negative numbers giving ``th''
 \def\nthtest{<}  % alternate: \def\nthtest{=}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SIMPLIER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginDocument{\begin{bill}}
+
+\AtEndDocument{\end{bill}}

@@ -1,16 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{act-usa}[2021/06/18 A class for typesetting American acts]
+\LoadClass[letterpaper,10pt]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% GEOMETRY %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[left=2.5in,right=2.5in,bottom=1in]{geometry}
+\RequirePackage[left=2.5in,right=2.5in,bottom=1in]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% FONTS %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{fontspec}
+\RequirePackage{fontspec}
 
 \setromanfont{New Century Schoolbook LT Std}
 \newfontface\goudy{Goudy Text MT Std}
@@ -22,7 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcounter{seclaw}
-\usepackage{ifthen}
+\RequirePackage{ifthen}
 \newcommand{\lawsec}[1]{\stepcounter{seclaw}\par\noindent\normalfont\MakeUppercase{\footnotesize\bfseries 
 \ifnum\theseclaw=1%
 section %
@@ -58,9 +61,10 @@ sec.
 
 
 \makeatother
-\usepackage{numname}
+\RequirePackage{numname}
 \renewcommand*{\namenumberand}{ }
-\usepackage{fmtcount}
+\let\ordinal\relax % to avoid a spurious warning
+\RequirePackage{fmtcount}
 %%%%%%%%%%%%
 %%%%HEADER%%
 %%%%%%%%%%%%
@@ -78,7 +82,7 @@ sec.
 
 \medskip
 
-\bodo Begun and held at the City of Washington on \printcongressdow,
+\normalfont\bodo Begun and held at the City of Washington on \printcongressdow,
 the \ordinaltoname{\printcongressday}\ day of \printcongressmonth, \numtoname{\printcongressyear}
 \end{center}
 \bigskip
@@ -107,3 +111,11 @@ sec.
 		\end{tabular}
 		\end{flushright}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EASIER TO JUST HAVE IT GO AUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginDocument{\begin{act}}
+
+\AtEndDocument{\end{act}}
